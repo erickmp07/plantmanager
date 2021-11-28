@@ -1,5 +1,7 @@
 {
+  "name": "PlantManager",
   "main": "node_modules/expo/AppEntry.js",
+  "description": "App to help people remember to take care of plants.",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
