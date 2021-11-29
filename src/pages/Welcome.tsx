@@ -1,5 +1,12 @@
 import React from "react";
-import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { 
+    Dimensions, 
+    Image, 
+    SafeAreaView, 
+    StyleSheet, 
+    Text, 
+    TouchableOpacity 
+} from "react-native";
 
 import wateringImage from "../assets/watering.png";
 import colors from "../styles/colors";
@@ -11,7 +18,11 @@ export function Welcome() {
                 Manage your plants {'\n'} easily
             </Text>
 
-            <Image source={wateringImage} style={styles.image} />
+            <Image 
+                source={wateringImage} 
+                style={styles.image}
+                resizeMode="contain" 
+            />
 
             <Text style={styles.subtitle}>
                 Don't forget to water your plants anymore. We take care to remind you whenever you need it.
@@ -33,7 +44,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: "center",
-        justifyContent: "space-between"
+        justifyContent: "space-around"
     },
     title: {
         fontSize: 32,
@@ -43,8 +54,7 @@ const styles = StyleSheet.create({
         marginTop: 38
     },
     image: {
-        width: 292,
-        height: 284
+        height: Dimensions.get("window").width * 0.7
     },
     subtitle: {
         textAlign: "center",
