@@ -1,5 +1,7 @@
 # PlantManager
 
+![banner](./assets/banner.png)
+
 App to help people remember to take care of plants.
 
 ## Table of Contents
