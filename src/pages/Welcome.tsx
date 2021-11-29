@@ -5,39 +5,43 @@ import {
     SafeAreaView, 
     StyleSheet, 
     Text, 
-    TouchableOpacity 
+    TouchableOpacity, 
+    View
 } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
 import wateringImage from "../assets/watering.png";
 import colors from "../styles/colors";
+import fonts from "../styles/fonts";
 
 export function Welcome() {
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.title}>
-                Manage your plants {'\n'} easily
-            </Text>
+            <View style={styles.wrapper}>
+                <Text style={styles.title}>
+                    Manage your plants {'\n'} easily
+                </Text>
 
-            <Image 
-                source={wateringImage} 
-                style={styles.image}
-                resizeMode="contain" 
-            />
-
-            <Text style={styles.subtitle}>
-                Don't forget to water your plants anymore. We take care to remind you whenever you need it.
-            </Text>
-
-            <TouchableOpacity 
-                style={styles.button}
-                activeOpacity={0.7}
-            >
-                <Feather 
-                    name="chevron-right" 
-                    style={styles.buttonIcon} 
+                <Image 
+                    source={wateringImage} 
+                    style={styles.image}
+                    resizeMode="contain" 
                 />
-            </TouchableOpacity>
+
+                <Text style={styles.subtitle}>
+                    Don't forget to water your plants anymore. We take care to remind you whenever you need it.
+                </Text>
+
+                <TouchableOpacity 
+                    style={styles.button}
+                    activeOpacity={0.7}
+                >
+                    <Feather 
+                        name="chevron-right" 
+                        style={styles.buttonIcon} 
+                    />
+                </TouchableOpacity>
+            </View>
         </SafeAreaView>
     );
 }
@@ -45,15 +49,21 @@ export function Welcome() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+    },
+    wrapper: {
+        flex: 1,
         alignItems: "center",
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        paddingHorizontal: 20
     },
     title: {
-        fontSize: 32,
+        fontSize: 28,
         fontWeight: "bold",
         textAlign: "center",
         color: colors.heading,
-        marginTop: 38
+        marginTop: 38,
+        fontFamily: fonts.heading,
+        lineHeight: 34
     },
     image: {
         height: Dimensions.get("window").width * 0.7
@@ -62,7 +72,8 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 18,
         paddingHorizontal: 20,
-        color: colors.heading
+        color: colors.heading,
+        fontFamily: fonts.text
     },
     button: {
         backgroundColor: colors.green,
