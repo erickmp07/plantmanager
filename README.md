@@ -39,6 +39,7 @@ yarn start
 
 ## Technologies
 
+- [TypeScript](https://www.typescriptlang.org/)
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
 - [React Native](https://reactnative.dev/)
