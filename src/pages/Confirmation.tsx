@@ -28,7 +28,9 @@ export function Confirmation() {
                 </Text>
 
                 <View style={styles.footer}>
-                    <Button />
+                    <Button 
+                        title="Start"
+                    />
                 </View>
             </View>
         </SafeAreaView>
